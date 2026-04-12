@@ -38,22 +38,25 @@
             labelRaceSpeed = new Label();
             labelRaceName = new Label();
             textBoxRaceName = new TextBox();
-            numericUpDown1 = new NumericUpDown();
-            comboBoxSize = new ComboBox();
+            numericUpDownRaceSpeed = new NumericUpDown();
+            comboBoxRaceSize = new ComboBox();
             buttonSaveChanges = new Button();
             buttonClose = new Button();
+            textBoxAbilityBonusDescription = new TextBox();
+            buttonAddRace = new Button();
+            buttonDeleteRace = new Button();
             ((System.ComponentModel.ISupportInitialize)dataGridViewRaces).BeginInit();
             ((System.ComponentModel.ISupportInitialize)bindingSourceRaces).BeginInit();
             ((System.ComponentModel.ISupportInitialize)errorProviderRaces).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)numericUpDown1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)numericUpDownRaceSpeed).BeginInit();
             SuspendLayout();
             // 
             // dataGridViewRaces
             // 
             dataGridViewRaces.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewRaces.Location = new Point(133, 166);
+            dataGridViewRaces.Location = new Point(139, 176);
             dataGridViewRaces.Name = "dataGridViewRaces";
-            dataGridViewRaces.Size = new Size(240, 150);
+            dataGridViewRaces.Size = new Size(336, 234);
             dataGridViewRaces.TabIndex = 0;
             // 
             // errorProviderRaces
@@ -112,20 +115,20 @@
             textBoxRaceName.Size = new Size(100, 23);
             textBoxRaceName.TabIndex = 7;
             // 
-            // numericUpDown1
+            // numericUpDownRaceSpeed
             // 
-            numericUpDown1.Location = new Point(854, 331);
-            numericUpDown1.Name = "numericUpDown1";
-            numericUpDown1.Size = new Size(120, 23);
-            numericUpDown1.TabIndex = 9;
+            numericUpDownRaceSpeed.Location = new Point(854, 331);
+            numericUpDownRaceSpeed.Name = "numericUpDownRaceSpeed";
+            numericUpDownRaceSpeed.Size = new Size(120, 23);
+            numericUpDownRaceSpeed.TabIndex = 9;
             // 
-            // comboBoxSize
+            // comboBoxRaceSize
             // 
-            comboBoxSize.FormattingEnabled = true;
-            comboBoxSize.Location = new Point(853, 375);
-            comboBoxSize.Name = "comboBoxSize";
-            comboBoxSize.Size = new Size(121, 23);
-            comboBoxSize.TabIndex = 10;
+            comboBoxRaceSize.FormattingEnabled = true;
+            comboBoxRaceSize.Location = new Point(853, 375);
+            comboBoxRaceSize.Name = "comboBoxRaceSize";
+            comboBoxRaceSize.Size = new Size(121, 23);
+            comboBoxRaceSize.TabIndex = 10;
             // 
             // buttonSaveChanges
             // 
@@ -135,6 +138,7 @@
             buttonSaveChanges.TabIndex = 13;
             buttonSaveChanges.Text = "Save changes";
             buttonSaveChanges.UseVisualStyleBackColor = true;
+            buttonSaveChanges.Click += buttonSaveChanges_Click;
             // 
             // buttonClose
             // 
@@ -146,15 +150,45 @@
             buttonClose.UseVisualStyleBackColor = true;
             buttonClose.Click += buttonClose_Click;
             // 
+            // textBoxAbilityBonusDescription
+            // 
+            textBoxAbilityBonusDescription.Location = new Point(853, 436);
+            textBoxAbilityBonusDescription.Name = "textBoxAbilityBonusDescription";
+            textBoxAbilityBonusDescription.Size = new Size(100, 23);
+            textBoxAbilityBonusDescription.TabIndex = 15;
+            // 
+            // buttonAddRace
+            // 
+            buttonAddRace.Location = new Point(534, 526);
+            buttonAddRace.Name = "buttonAddRace";
+            buttonAddRace.Size = new Size(75, 23);
+            buttonAddRace.TabIndex = 16;
+            buttonAddRace.Text = "Add Race";
+            buttonAddRace.UseVisualStyleBackColor = true;
+            buttonAddRace.Click += buttonAddRace_Click;
+            // 
+            // buttonDeleteRace
+            // 
+            buttonDeleteRace.Location = new Point(656, 526);
+            buttonDeleteRace.Name = "buttonDeleteRace";
+            buttonDeleteRace.Size = new Size(83, 23);
+            buttonDeleteRace.TabIndex = 17;
+            buttonDeleteRace.Text = "Delete race";
+            buttonDeleteRace.UseVisualStyleBackColor = true;
+            buttonDeleteRace.Click += buttonDeleteRace_Click;
+            // 
             // FormRaces
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1401, 706);
+            Controls.Add(buttonDeleteRace);
+            Controls.Add(buttonAddRace);
+            Controls.Add(textBoxAbilityBonusDescription);
             Controls.Add(buttonClose);
             Controls.Add(buttonSaveChanges);
-            Controls.Add(comboBoxSize);
-            Controls.Add(numericUpDown1);
+            Controls.Add(comboBoxRaceSize);
+            Controls.Add(numericUpDownRaceSpeed);
             Controls.Add(textBoxRaceName);
             Controls.Add(labelRaceName);
             Controls.Add(labelRaceSpeed);
@@ -164,10 +198,12 @@
             Controls.Add(dataGridViewRaces);
             Name = "FormRaces";
             Text = "FormRaces";
+            FormClosing += FormRaces_FormClosing;
+            Load += FormRaces_Load;
             ((System.ComponentModel.ISupportInitialize)dataGridViewRaces).EndInit();
             ((System.ComponentModel.ISupportInitialize)bindingSourceRaces).EndInit();
             ((System.ComponentModel.ISupportInitialize)errorProviderRaces).EndInit();
-            ((System.ComponentModel.ISupportInitialize)numericUpDown1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)numericUpDownRaceSpeed).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -182,10 +218,13 @@
         private Label labelRaceSpeed;
         private Label labelRaceSize;
         private Label labelAbilityBonusDescription;
-        private NumericUpDown numericUpDown1;
+        private NumericUpDown numericUpDownRaceSpeed;
         private TextBox textBoxRaceName;
         private Button buttonClose;
         private Button buttonSaveChanges;
-        private ComboBox comboBoxSize;
+        private ComboBox comboBoxRaceSize;
+        private TextBox textBoxAbilityBonusDescription;
+        private Button buttonDeleteRace;
+        private Button buttonAddRace;
     }
 }

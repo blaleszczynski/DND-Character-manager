@@ -38,48 +38,63 @@
             labelCharacterRace = new Label();
             labelCharacterClass = new Label();
             labelCharacterStrength = new Label();
-            numericUpDown1 = new NumericUpDown();
-            numericUpDown2 = new NumericUpDown();
+            numericUpDownStrength = new NumericUpDown();
+            numericUpDownConstitution = new NumericUpDown();
             labelCharacterConstitution = new Label();
-            numericUpDown3 = new NumericUpDown();
+            numericUpDownIntelligence = new NumericUpDown();
             labelCharacterIntelligence = new Label();
-            numericUpDown4 = new NumericUpDown();
+            numericUpDownWisdom = new NumericUpDown();
             labelCharacterWisdom = new Label();
-            numericUpDown5 = new NumericUpDown();
+            numericUpDownCharisma = new NumericUpDown();
             labelCurrentHp = new Label();
-            numericUpDown6 = new NumericUpDown();
+            numericUpDownCurrentHp = new NumericUpDown();
             labelCharacterCharisma = new Label();
-            numericUpDown7 = new NumericUpDown();
+            numericUpDownMaxHp = new NumericUpDown();
             labelCharacterMaxHp = new Label();
-            numericUpDown8 = new NumericUpDown();
+            numericUpDownDexterity = new NumericUpDown();
             labelCharacterDexterity = new Label();
             numericUpDownLevel = new NumericUpDown();
-            comboBox1 = new ComboBox();
-            comboBox2 = new ComboBox();
-            comboBox3 = new ComboBox();
+            comboBoxAlignment = new ComboBox();
+            comboBoxClass = new ComboBox();
+            comboBoxRace = new ComboBox();
             textBoxCharacterName = new TextBox();
-            textBoxCharacterBackground = new TextBox();
-            textBoxCharacterNotes = new TextBox();
+            textBoxBackground = new TextBox();
+            textBoxNotes = new TextBox();
             labelCharacterNotes = new Label();
             dataGridViewCharacters = new DataGridView();
-            dataGridViewCharactersItems = new DataGridView();
+            dataGridViewCharacterItems = new DataGridView();
             errorProviderCharacters = new ErrorProvider(components);
             buttonSaveChanges = new Button();
             buttonClose = new Button();
+            bindingSourceCharacterItems = new BindingSource(components);
+            comboBoxAvailableItems = new ComboBox();
+            numericUpDownItemQuantity = new NumericUpDown();
+            checkBoxIsEquipped = new CheckBox();
+            buttonAddCharacter = new Button();
+            buttonDeleteCharacter = new Button();
+            buttonUpdateCharacterItem = new Button();
+            buttonAddItemToCharacter = new Button();
+            buttonRemoveItemFromCharacter = new Button();
             ((System.ComponentModel.ISupportInitialize)bindingSourceCharacters).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)numericUpDown1).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)numericUpDown2).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)numericUpDown3).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)numericUpDown4).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)numericUpDown5).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)numericUpDown6).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)numericUpDown7).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)numericUpDown8).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)numericUpDownStrength).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)numericUpDownConstitution).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)numericUpDownIntelligence).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)numericUpDownWisdom).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)numericUpDownCharisma).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)numericUpDownCurrentHp).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)numericUpDownMaxHp).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)numericUpDownDexterity).BeginInit();
             ((System.ComponentModel.ISupportInitialize)numericUpDownLevel).BeginInit();
             ((System.ComponentModel.ISupportInitialize)dataGridViewCharacters).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)dataGridViewCharactersItems).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)dataGridViewCharacterItems).BeginInit();
             ((System.ComponentModel.ISupportInitialize)errorProviderCharacters).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)bindingSourceCharacterItems).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)numericUpDownItemQuantity).BeginInit();
             SuspendLayout();
+            // 
+            // bindingSourceCharacters
+            // 
+            bindingSourceCharacters.CurrentChanged += bindingSourceCharacters_CurrentChanged;
             // 
             // labelCharactersTitle
             // 
@@ -153,19 +168,19 @@
             labelCharacterStrength.TabIndex = 14;
             labelCharacterStrength.Text = "Strength";
             // 
-            // numericUpDown1
+            // numericUpDownStrength
             // 
-            numericUpDown1.Location = new Point(272, 127);
-            numericUpDown1.Name = "numericUpDown1";
-            numericUpDown1.Size = new Size(120, 23);
-            numericUpDown1.TabIndex = 15;
+            numericUpDownStrength.Location = new Point(272, 127);
+            numericUpDownStrength.Name = "numericUpDownStrength";
+            numericUpDownStrength.Size = new Size(120, 23);
+            numericUpDownStrength.TabIndex = 15;
             // 
-            // numericUpDown2
+            // numericUpDownConstitution
             // 
-            numericUpDown2.Location = new Point(272, 253);
-            numericUpDown2.Name = "numericUpDown2";
-            numericUpDown2.Size = new Size(120, 23);
-            numericUpDown2.TabIndex = 17;
+            numericUpDownConstitution.Location = new Point(272, 253);
+            numericUpDownConstitution.Name = "numericUpDownConstitution";
+            numericUpDownConstitution.Size = new Size(120, 23);
+            numericUpDownConstitution.TabIndex = 17;
             // 
             // labelCharacterConstitution
             // 
@@ -176,12 +191,12 @@
             labelCharacterConstitution.TabIndex = 16;
             labelCharacterConstitution.Text = "Constitution";
             // 
-            // numericUpDown3
+            // numericUpDownIntelligence
             // 
-            numericUpDown3.Location = new Point(272, 330);
-            numericUpDown3.Name = "numericUpDown3";
-            numericUpDown3.Size = new Size(120, 23);
-            numericUpDown3.TabIndex = 19;
+            numericUpDownIntelligence.Location = new Point(272, 330);
+            numericUpDownIntelligence.Name = "numericUpDownIntelligence";
+            numericUpDownIntelligence.Size = new Size(120, 23);
+            numericUpDownIntelligence.TabIndex = 19;
             // 
             // labelCharacterIntelligence
             // 
@@ -192,12 +207,12 @@
             labelCharacterIntelligence.TabIndex = 18;
             labelCharacterIntelligence.Text = "Intelligence";
             // 
-            // numericUpDown4
+            // numericUpDownWisdom
             // 
-            numericUpDown4.Location = new Point(272, 389);
-            numericUpDown4.Name = "numericUpDown4";
-            numericUpDown4.Size = new Size(120, 23);
-            numericUpDown4.TabIndex = 21;
+            numericUpDownWisdom.Location = new Point(272, 389);
+            numericUpDownWisdom.Name = "numericUpDownWisdom";
+            numericUpDownWisdom.Size = new Size(120, 23);
+            numericUpDownWisdom.TabIndex = 21;
             // 
             // labelCharacterWisdom
             // 
@@ -208,12 +223,12 @@
             labelCharacterWisdom.TabIndex = 20;
             labelCharacterWisdom.Text = "Wisdom";
             // 
-            // numericUpDown5
+            // numericUpDownCharisma
             // 
-            numericUpDown5.Location = new Point(272, 452);
-            numericUpDown5.Name = "numericUpDown5";
-            numericUpDown5.Size = new Size(120, 23);
-            numericUpDown5.TabIndex = 23;
+            numericUpDownCharisma.Location = new Point(272, 452);
+            numericUpDownCharisma.Name = "numericUpDownCharisma";
+            numericUpDownCharisma.Size = new Size(120, 23);
+            numericUpDownCharisma.TabIndex = 23;
             // 
             // labelCurrentHp
             // 
@@ -224,12 +239,12 @@
             labelCurrentHp.TabIndex = 22;
             labelCurrentHp.Text = "Current HP";
             // 
-            // numericUpDown6
+            // numericUpDownCurrentHp
             // 
-            numericUpDown6.Location = new Point(436, 127);
-            numericUpDown6.Name = "numericUpDown6";
-            numericUpDown6.Size = new Size(120, 23);
-            numericUpDown6.TabIndex = 25;
+            numericUpDownCurrentHp.Location = new Point(436, 127);
+            numericUpDownCurrentHp.Name = "numericUpDownCurrentHp";
+            numericUpDownCurrentHp.Size = new Size(120, 23);
+            numericUpDownCurrentHp.TabIndex = 25;
             // 
             // labelCharacterCharisma
             // 
@@ -240,12 +255,12 @@
             labelCharacterCharisma.TabIndex = 24;
             labelCharacterCharisma.Text = "Charisma";
             // 
-            // numericUpDown7
+            // numericUpDownMaxHp
             // 
-            numericUpDown7.Location = new Point(436, 188);
-            numericUpDown7.Name = "numericUpDown7";
-            numericUpDown7.Size = new Size(120, 23);
-            numericUpDown7.TabIndex = 27;
+            numericUpDownMaxHp.Location = new Point(436, 188);
+            numericUpDownMaxHp.Name = "numericUpDownMaxHp";
+            numericUpDownMaxHp.Size = new Size(120, 23);
+            numericUpDownMaxHp.TabIndex = 27;
             // 
             // labelCharacterMaxHp
             // 
@@ -256,12 +271,12 @@
             labelCharacterMaxHp.TabIndex = 26;
             labelCharacterMaxHp.Text = "Max HP";
             // 
-            // numericUpDown8
+            // numericUpDownDexterity
             // 
-            numericUpDown8.Location = new Point(272, 189);
-            numericUpDown8.Name = "numericUpDown8";
-            numericUpDown8.Size = new Size(120, 23);
-            numericUpDown8.TabIndex = 29;
+            numericUpDownDexterity.Location = new Point(272, 189);
+            numericUpDownDexterity.Name = "numericUpDownDexterity";
+            numericUpDownDexterity.Size = new Size(120, 23);
+            numericUpDownDexterity.TabIndex = 29;
             // 
             // labelCharacterDexterity
             // 
@@ -279,29 +294,29 @@
             numericUpDownLevel.Size = new Size(120, 23);
             numericUpDownLevel.TabIndex = 30;
             // 
-            // comboBox1
+            // comboBoxAlignment
             // 
-            comboBox1.FormattingEnabled = true;
-            comboBox1.Location = new Point(21, 209);
-            comboBox1.Name = "comboBox1";
-            comboBox1.Size = new Size(121, 23);
-            comboBox1.TabIndex = 31;
+            comboBoxAlignment.FormattingEnabled = true;
+            comboBoxAlignment.Location = new Point(21, 209);
+            comboBoxAlignment.Name = "comboBoxAlignment";
+            comboBoxAlignment.Size = new Size(121, 23);
+            comboBoxAlignment.TabIndex = 31;
             // 
-            // comboBox2
+            // comboBoxClass
             // 
-            comboBox2.FormattingEnabled = true;
-            comboBox2.Location = new Point(20, 356);
-            comboBox2.Name = "comboBox2";
-            comboBox2.Size = new Size(121, 23);
-            comboBox2.TabIndex = 32;
+            comboBoxClass.FormattingEnabled = true;
+            comboBoxClass.Location = new Point(20, 356);
+            comboBoxClass.Name = "comboBoxClass";
+            comboBoxClass.Size = new Size(121, 23);
+            comboBoxClass.TabIndex = 32;
             // 
-            // comboBox3
+            // comboBoxRace
             // 
-            comboBox3.FormattingEnabled = true;
-            comboBox3.Location = new Point(17, 309);
-            comboBox3.Name = "comboBox3";
-            comboBox3.Size = new Size(121, 23);
-            comboBox3.TabIndex = 33;
+            comboBoxRace.FormattingEnabled = true;
+            comboBoxRace.Location = new Point(21, 304);
+            comboBoxRace.Name = "comboBoxRace";
+            comboBoxRace.Size = new Size(121, 23);
+            comboBoxRace.TabIndex = 33;
             // 
             // textBoxCharacterName
             // 
@@ -310,19 +325,19 @@
             textBoxCharacterName.Size = new Size(100, 23);
             textBoxCharacterName.TabIndex = 34;
             // 
-            // textBoxCharacterBackground
+            // textBoxBackground
             // 
-            textBoxCharacterBackground.Location = new Point(21, 253);
-            textBoxCharacterBackground.Name = "textBoxCharacterBackground";
-            textBoxCharacterBackground.Size = new Size(100, 23);
-            textBoxCharacterBackground.TabIndex = 35;
+            textBoxBackground.Location = new Point(21, 253);
+            textBoxBackground.Name = "textBoxBackground";
+            textBoxBackground.Size = new Size(100, 23);
+            textBoxBackground.TabIndex = 35;
             // 
-            // textBoxCharacterNotes
+            // textBoxNotes
             // 
-            textBoxCharacterNotes.Location = new Point(20, 452);
-            textBoxCharacterNotes.Name = "textBoxCharacterNotes";
-            textBoxCharacterNotes.Size = new Size(100, 23);
-            textBoxCharacterNotes.TabIndex = 37;
+            textBoxNotes.Location = new Point(20, 452);
+            textBoxNotes.Name = "textBoxNotes";
+            textBoxNotes.Size = new Size(100, 23);
+            textBoxNotes.TabIndex = 37;
             // 
             // labelCharacterNotes
             // 
@@ -338,16 +353,16 @@
             dataGridViewCharacters.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dataGridViewCharacters.Location = new Point(964, 56);
             dataGridViewCharacters.Name = "dataGridViewCharacters";
-            dataGridViewCharacters.Size = new Size(240, 150);
+            dataGridViewCharacters.Size = new Size(483, 150);
             dataGridViewCharacters.TabIndex = 38;
             // 
-            // dataGridViewCharactersItems
+            // dataGridViewCharacterItems
             // 
-            dataGridViewCharactersItems.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCharactersItems.Location = new Point(964, 283);
-            dataGridViewCharactersItems.Name = "dataGridViewCharactersItems";
-            dataGridViewCharactersItems.Size = new Size(240, 150);
-            dataGridViewCharactersItems.TabIndex = 39;
+            dataGridViewCharacterItems.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewCharacterItems.Location = new Point(964, 283);
+            dataGridViewCharacterItems.Name = "dataGridViewCharacterItems";
+            dataGridViewCharacterItems.Size = new Size(483, 150);
+            dataGridViewCharacterItems.TabIndex = 39;
             // 
             // errorProviderCharacters
             // 
@@ -361,6 +376,7 @@
             buttonSaveChanges.TabIndex = 40;
             buttonSaveChanges.Text = "Save Changes";
             buttonSaveChanges.UseVisualStyleBackColor = true;
+            buttonSaveChanges.Click += buttonSaveChanges_Click;
             // 
             // buttonClose
             // 
@@ -372,38 +388,125 @@
             buttonClose.UseVisualStyleBackColor = true;
             buttonClose.Click += buttonClose_Click;
             // 
+            // bindingSourceCharacterItems
+            // 
+            bindingSourceCharacterItems.CurrentChanged += bindingSourceCharacterItems_CurrentChanged;
+            // 
+            // comboBoxAvailableItems
+            // 
+            comboBoxAvailableItems.FormattingEnabled = true;
+            comboBoxAvailableItems.Location = new Point(635, 451);
+            comboBoxAvailableItems.Name = "comboBoxAvailableItems";
+            comboBoxAvailableItems.Size = new Size(121, 23);
+            comboBoxAvailableItems.TabIndex = 42;
+            // 
+            // numericUpDownItemQuantity
+            // 
+            numericUpDownItemQuantity.Location = new Point(636, 490);
+            numericUpDownItemQuantity.Name = "numericUpDownItemQuantity";
+            numericUpDownItemQuantity.Size = new Size(120, 23);
+            numericUpDownItemQuantity.TabIndex = 43;
+            // 
+            // checkBoxIsEquipped
+            // 
+            checkBoxIsEquipped.AutoSize = true;
+            checkBoxIsEquipped.Location = new Point(636, 519);
+            checkBoxIsEquipped.Name = "checkBoxIsEquipped";
+            checkBoxIsEquipped.Size = new Size(81, 19);
+            checkBoxIsEquipped.TabIndex = 44;
+            checkBoxIsEquipped.Text = "Equipped?";
+            checkBoxIsEquipped.UseVisualStyleBackColor = true;
+            // 
+            // buttonAddCharacter
+            // 
+            buttonAddCharacter.Location = new Point(811, 56);
+            buttonAddCharacter.Name = "buttonAddCharacter";
+            buttonAddCharacter.Size = new Size(135, 23);
+            buttonAddCharacter.TabIndex = 45;
+            buttonAddCharacter.Text = "Add character";
+            buttonAddCharacter.UseVisualStyleBackColor = true;
+            buttonAddCharacter.Click += buttonAddCharacter_Click;
+            // 
+            // buttonDeleteCharacter
+            // 
+            buttonDeleteCharacter.Location = new Point(811, 85);
+            buttonDeleteCharacter.Name = "buttonDeleteCharacter";
+            buttonDeleteCharacter.Size = new Size(135, 23);
+            buttonDeleteCharacter.TabIndex = 46;
+            buttonDeleteCharacter.Text = "Delete character";
+            buttonDeleteCharacter.UseVisualStyleBackColor = true;
+            buttonDeleteCharacter.Click += buttonDeleteCharacter_Click;
+            // 
+            // buttonUpdateCharacterItem
+            // 
+            buttonUpdateCharacterItem.Location = new Point(762, 481);
+            buttonUpdateCharacterItem.Name = "buttonUpdateCharacterItem";
+            buttonUpdateCharacterItem.Size = new Size(135, 23);
+            buttonUpdateCharacterItem.TabIndex = 47;
+            buttonUpdateCharacterItem.Text = "Update Item";
+            buttonUpdateCharacterItem.UseVisualStyleBackColor = true;
+            buttonUpdateCharacterItem.Click += buttonUpdateCharacterItem_Click;
+            // 
+            // buttonAddItemToCharacter
+            // 
+            buttonAddItemToCharacter.Location = new Point(762, 452);
+            buttonAddItemToCharacter.Name = "buttonAddItemToCharacter";
+            buttonAddItemToCharacter.Size = new Size(135, 23);
+            buttonAddItemToCharacter.TabIndex = 48;
+            buttonAddItemToCharacter.Text = "Add Item";
+            buttonAddItemToCharacter.UseVisualStyleBackColor = true;
+            buttonAddItemToCharacter.Click += buttonAddItemToCharacter_Click;
+            // 
+            // buttonRemoveItemFromCharacter
+            // 
+            buttonRemoveItemFromCharacter.Location = new Point(762, 510);
+            buttonRemoveItemFromCharacter.Name = "buttonRemoveItemFromCharacter";
+            buttonRemoveItemFromCharacter.Size = new Size(135, 23);
+            buttonRemoveItemFromCharacter.TabIndex = 49;
+            buttonRemoveItemFromCharacter.Text = "Remove Item";
+            buttonRemoveItemFromCharacter.UseVisualStyleBackColor = true;
+            buttonRemoveItemFromCharacter.Click += buttonRemoveItemFromCharacter_Click;
+            // 
             // FormCharacters
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1539, 821);
+            Controls.Add(buttonRemoveItemFromCharacter);
+            Controls.Add(buttonAddItemToCharacter);
+            Controls.Add(buttonUpdateCharacterItem);
+            Controls.Add(buttonDeleteCharacter);
+            Controls.Add(buttonAddCharacter);
+            Controls.Add(checkBoxIsEquipped);
+            Controls.Add(numericUpDownItemQuantity);
+            Controls.Add(comboBoxAvailableItems);
             Controls.Add(buttonClose);
             Controls.Add(buttonSaveChanges);
-            Controls.Add(dataGridViewCharactersItems);
+            Controls.Add(dataGridViewCharacterItems);
             Controls.Add(dataGridViewCharacters);
-            Controls.Add(textBoxCharacterNotes);
+            Controls.Add(textBoxNotes);
             Controls.Add(labelCharacterNotes);
-            Controls.Add(textBoxCharacterBackground);
+            Controls.Add(textBoxBackground);
             Controls.Add(textBoxCharacterName);
-            Controls.Add(comboBox3);
-            Controls.Add(comboBox2);
-            Controls.Add(comboBox1);
+            Controls.Add(comboBoxRace);
+            Controls.Add(comboBoxClass);
+            Controls.Add(comboBoxAlignment);
             Controls.Add(numericUpDownLevel);
-            Controls.Add(numericUpDown8);
+            Controls.Add(numericUpDownDexterity);
             Controls.Add(labelCharacterDexterity);
-            Controls.Add(numericUpDown7);
+            Controls.Add(numericUpDownMaxHp);
             Controls.Add(labelCharacterMaxHp);
-            Controls.Add(numericUpDown6);
+            Controls.Add(numericUpDownCurrentHp);
             Controls.Add(labelCharacterCharisma);
-            Controls.Add(numericUpDown5);
+            Controls.Add(numericUpDownCharisma);
             Controls.Add(labelCurrentHp);
-            Controls.Add(numericUpDown4);
+            Controls.Add(numericUpDownWisdom);
             Controls.Add(labelCharacterWisdom);
-            Controls.Add(numericUpDown3);
+            Controls.Add(numericUpDownIntelligence);
             Controls.Add(labelCharacterIntelligence);
-            Controls.Add(numericUpDown2);
+            Controls.Add(numericUpDownConstitution);
             Controls.Add(labelCharacterConstitution);
-            Controls.Add(numericUpDown1);
+            Controls.Add(numericUpDownStrength);
             Controls.Add(labelCharacterStrength);
             Controls.Add(labelCharacterClass);
             Controls.Add(labelCharacterRace);
@@ -414,19 +517,23 @@
             Controls.Add(labelCharactersTitle);
             Name = "FormCharacters";
             Text = "FormCharacters";
+            FormClosing += FormCharacters_FormClosing;
+            Load += FormCharacters_Load;
             ((System.ComponentModel.ISupportInitialize)bindingSourceCharacters).EndInit();
-            ((System.ComponentModel.ISupportInitialize)numericUpDown1).EndInit();
-            ((System.ComponentModel.ISupportInitialize)numericUpDown2).EndInit();
-            ((System.ComponentModel.ISupportInitialize)numericUpDown3).EndInit();
-            ((System.ComponentModel.ISupportInitialize)numericUpDown4).EndInit();
-            ((System.ComponentModel.ISupportInitialize)numericUpDown5).EndInit();
-            ((System.ComponentModel.ISupportInitialize)numericUpDown6).EndInit();
-            ((System.ComponentModel.ISupportInitialize)numericUpDown7).EndInit();
-            ((System.ComponentModel.ISupportInitialize)numericUpDown8).EndInit();
+            ((System.ComponentModel.ISupportInitialize)numericUpDownStrength).EndInit();
+            ((System.ComponentModel.ISupportInitialize)numericUpDownConstitution).EndInit();
+            ((System.ComponentModel.ISupportInitialize)numericUpDownIntelligence).EndInit();
+            ((System.ComponentModel.ISupportInitialize)numericUpDownWisdom).EndInit();
+            ((System.ComponentModel.ISupportInitialize)numericUpDownCharisma).EndInit();
+            ((System.ComponentModel.ISupportInitialize)numericUpDownCurrentHp).EndInit();
+            ((System.ComponentModel.ISupportInitialize)numericUpDownMaxHp).EndInit();
+            ((System.ComponentModel.ISupportInitialize)numericUpDownDexterity).EndInit();
             ((System.ComponentModel.ISupportInitialize)numericUpDownLevel).EndInit();
             ((System.ComponentModel.ISupportInitialize)dataGridViewCharacters).EndInit();
-            ((System.ComponentModel.ISupportInitialize)dataGridViewCharactersItems).EndInit();
+            ((System.ComponentModel.ISupportInitialize)dataGridViewCharacterItems).EndInit();
             ((System.ComponentModel.ISupportInitialize)errorProviderCharacters).EndInit();
+            ((System.ComponentModel.ISupportInitialize)bindingSourceCharacterItems).EndInit();
+            ((System.ComponentModel.ISupportInitialize)numericUpDownItemQuantity).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -442,33 +549,42 @@
         private Label labelCharacterRace;
         private Label labelCharacterClass;
         private Label labelCharacterStrength;
-        private NumericUpDown numericUpDown1;
-        private NumericUpDown numericUpDown2;
+        private NumericUpDown numericUpDownStrength;
+        private NumericUpDown numericUpDownConstitution;
         private Label labelCharacterConstitution;
-        private NumericUpDown numericUpDown3;
+        private NumericUpDown numericUpDownIntelligence;
         private Label labelCharacterIntelligence;
-        private NumericUpDown numericUpDown4;
+        private NumericUpDown numericUpDownWisdom;
         private Label labelCharacterWisdom;
-        private NumericUpDown numericUpDown5;
+        private NumericUpDown numericUpDownCharisma;
         private Label labelCurrentHp;
-        private NumericUpDown numericUpDown6;
+        private NumericUpDown numericUpDownCurrentHp;
         private Label labelCharacterCharisma;
-        private NumericUpDown numericUpDown7;
+        private NumericUpDown numericUpDownMaxHp;
         private Label labelCharacterMaxHp;
-        private NumericUpDown numericUpDown8;
+        private NumericUpDown numericUpDownDexterity;
         private Label labelCharacterDexterity;
         private NumericUpDown numericUpDownLevel;
-        private ComboBox comboBox1;
-        private ComboBox comboBox2;
-        private ComboBox comboBox3;
+        private ComboBox comboBoxAlignment;
+        private ComboBox comboBoxClass;
+        private ComboBox comboBoxRace;
         private TextBox textBoxCharacterName;
-        private TextBox textBoxCharacterBackground;
-        private TextBox textBoxCharacterNotes;
+        private TextBox textBoxBackground;
+        private TextBox textBoxNotes;
         private Label labelCharacterNotes;
         private DataGridView dataGridViewCharacters;
-        private DataGridView dataGridViewCharactersItems;
+        private DataGridView dataGridViewCharacterItems;
         private ErrorProvider errorProviderCharacters;
         private Button buttonClose;
         private Button buttonSaveChanges;
+        private BindingSource bindingSourceCharacterItems;
+        private NumericUpDown numericUpDownItemQuantity;
+        private ComboBox comboBoxAvailableItems;
+        private CheckBox checkBoxIsEquipped;
+        private Button buttonRemoveItemFromCharacter;
+        private Button buttonAddItemToCharacter;
+        private Button buttonUpdateCharacterItem;
+        private Button buttonDeleteCharacter;
+        private Button buttonAddCharacter;
     }
 }
