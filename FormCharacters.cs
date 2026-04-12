@@ -27,7 +27,7 @@ namespace DND_Character_manager
         private DataTable classesTable;
         private DataTable itemsTable;
 
-        private DataView characterItemsView;
+        private DataView characterItemsView; 
 
         public FormCharacters()
         {
@@ -42,9 +42,9 @@ namespace DND_Character_manager
 
                 charactersAdapter = new SQLiteDataAdapter("SELECT * FROM Characters", connection);
                 characterItemsAdapter = new SQLiteDataAdapter("SELECT * FROM CharacterItems", connection);
-                racesAdapter = new SQLiteDataAdapter("SELECT * FROM Races", connection);
-                classesAdapter = new SQLiteDataAdapter("SELECT * FROM Classes", connection);
-                itemsAdapter = new SQLiteDataAdapter("SELECT * FROM Items", connection);
+                racesAdapter = new SQLiteDataAdapter("SELECT id, name FROM Races", connection);
+                classesAdapter = new SQLiteDataAdapter("SELECT id, name FROM Classes", connection);
+                itemsAdapter = new SQLiteDataAdapter("SELECT id, name FROM Items", connection);
 
                 SQLiteCommandBuilder charactersBuilder = new SQLiteCommandBuilder(charactersAdapter);
                 SQLiteCommandBuilder characterItemsBuilder = new SQLiteCommandBuilder(characterItemsAdapter);
@@ -115,6 +115,10 @@ namespace DND_Character_manager
                 numericUpDownMaxHp.DataBindings.Clear();
                 numericUpDownCurrentHp.DataBindings.Clear();
 
+                comboBoxAvailableItems.DataBindings.Clear();
+                numericUpDownItemQuantity.DataBindings.Clear();
+                checkBoxIsEquipped.DataBindings.Clear();
+
                 textBoxCharacterName.DataBindings.Add("Text", bindingSourceCharacters, "name", true, DataSourceUpdateMode.OnPropertyChanged);
                 textBoxBackground.DataBindings.Add("Text", bindingSourceCharacters, "background", true, DataSourceUpdateMode.OnPropertyChanged);
                 textBoxNotes.DataBindings.Add("Text", bindingSourceCharacters, "notes", true, DataSourceUpdateMode.OnPropertyChanged);
@@ -132,6 +136,10 @@ namespace DND_Character_manager
                 numericUpDownCharisma.DataBindings.Add("Value", bindingSourceCharacters, "charisma", true, DataSourceUpdateMode.OnPropertyChanged);
                 numericUpDownMaxHp.DataBindings.Add("Value", bindingSourceCharacters, "max_hp", true, DataSourceUpdateMode.OnPropertyChanged);
                 numericUpDownCurrentHp.DataBindings.Add("Value", bindingSourceCharacters, "current_hp", true, DataSourceUpdateMode.OnPropertyChanged);
+
+                comboBoxAvailableItems.DataBindings.Add("SelectedValue", bindingSourceCharacterItems, "item_id", true, DataSourceUpdateMode.OnPropertyChanged, DBNull.Value);
+                numericUpDownItemQuantity.DataBindings.Add("Value", bindingSourceCharacterItems, "quantity", true, DataSourceUpdateMode.OnPropertyChanged);
+                checkBoxIsEquipped.DataBindings.Add("Checked", bindingSourceCharacterItems, "is_equipped", true, DataSourceUpdateMode.OnPropertyChanged);
 
                 dataGridViewCharacters.ReadOnly = true;
                 dataGridViewCharacters.AllowUserToAddRows = false;
@@ -251,35 +259,7 @@ namespace DND_Character_manager
                 comboBoxAvailableItems.SelectedIndex = -1;
                 numericUpDownItemQuantity.Value = 1;
                 checkBoxIsEquipped.Checked = false;
-                return;
             }
-
-            DataRowView currentRow = bindingSourceCharacterItems.Current as DataRowView;
-
-            if (currentRow == null)
-            {
-                return;
-            }
-
-            if (currentRow["item_id"] != DBNull.Value)
-            {
-                comboBoxAvailableItems.SelectedValue = Convert.ToInt32(currentRow["item_id"]);
-            }
-            else
-            {
-                comboBoxAvailableItems.SelectedIndex = -1;
-            }
-
-            if (currentRow["quantity"] != DBNull.Value)
-            {
-                numericUpDownItemQuantity.Value = Convert.ToDecimal(currentRow["quantity"]);
-            }
-            else
-            {
-                numericUpDownItemQuantity.Value = 1;
-            }
-
-            checkBoxIsEquipped.Checked = Convert.ToInt32(currentRow["is_equipped"]) == 1;
         }
 
         private bool ValidateCharacter()
@@ -441,32 +421,6 @@ namespace DND_Character_manager
             }
         }
 
-        private void buttonUpdateCharacterItem_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                if (bindingSourceCharacterItems.Current == null)
-                {
-                    MessageBox.Show("Select a character item first.");
-                    return;
-                }
-
-                DataRowView currentRow = bindingSourceCharacterItems.Current as DataRowView;
-
-                if (currentRow == null)
-                {
-                    return;
-                }
-
-                currentRow["quantity"] = Convert.ToInt32(numericUpDownItemQuantity.Value);
-                currentRow["is_equipped"] = checkBoxIsEquipped.Checked ? 1 : 0;
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-            }
-        }
-
         private void buttonRemoveItemFromCharacter_Click(object sender, EventArgs e)
         {
             try
@@ -506,8 +460,8 @@ namespace DND_Character_manager
                 bindingSourceCharacters.EndEdit();
                 bindingSourceCharacterItems.EndEdit();
 
-                characterItemsAdapter.Update(characterItemsTable);
                 charactersAdapter.Update(charactersTable);
+                characterItemsAdapter.Update(characterItemsTable);
 
                 charactersTable.Clear();
                 characterItemsTable.Clear();
@@ -529,6 +483,8 @@ namespace DND_Character_manager
         {
             try
             {
+                bindingSourceCharacters.EndEdit();
+                bindingSourceCharacterItems.EndEdit();
                 if (!HasUnsavedChanges())
                 {
                     return;
@@ -552,8 +508,8 @@ namespace DND_Character_manager
                     bindingSourceCharacters.EndEdit();
                     bindingSourceCharacterItems.EndEdit();
 
-                    characterItemsAdapter.Update(characterItemsTable);
                     charactersAdapter.Update(charactersTable);
+                    characterItemsAdapter.Update(characterItemsTable);
                 }
                 else if (result == DialogResult.Cancel)
                 {

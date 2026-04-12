@@ -72,7 +72,6 @@
             checkBoxIsEquipped = new CheckBox();
             buttonAddCharacter = new Button();
             buttonDeleteCharacter = new Button();
-            buttonUpdateCharacterItem = new Button();
             buttonAddItemToCharacter = new Button();
             buttonRemoveItemFromCharacter = new Button();
             ((System.ComponentModel.ISupportInitialize)bindingSourceCharacters).BeginInit();
@@ -437,16 +436,6 @@
             buttonDeleteCharacter.UseVisualStyleBackColor = true;
             buttonDeleteCharacter.Click += buttonDeleteCharacter_Click;
             // 
-            // buttonUpdateCharacterItem
-            // 
-            buttonUpdateCharacterItem.Location = new Point(762, 481);
-            buttonUpdateCharacterItem.Name = "buttonUpdateCharacterItem";
-            buttonUpdateCharacterItem.Size = new Size(135, 23);
-            buttonUpdateCharacterItem.TabIndex = 47;
-            buttonUpdateCharacterItem.Text = "Update Item";
-            buttonUpdateCharacterItem.UseVisualStyleBackColor = true;
-            buttonUpdateCharacterItem.Click += buttonUpdateCharacterItem_Click;
-            // 
             // buttonAddItemToCharacter
             // 
             buttonAddItemToCharacter.Location = new Point(762, 452);
@@ -474,7 +463,6 @@
             ClientSize = new Size(1539, 821);
             Controls.Add(buttonRemoveItemFromCharacter);
             Controls.Add(buttonAddItemToCharacter);
-            Controls.Add(buttonUpdateCharacterItem);
             Controls.Add(buttonDeleteCharacter);
             Controls.Add(buttonAddCharacter);
             Controls.Add(checkBoxIsEquipped);
@@ -583,7 +571,6 @@
         private CheckBox checkBoxIsEquipped;
         private Button buttonRemoveItemFromCharacter;
         private Button buttonAddItemToCharacter;
-        private Button buttonUpdateCharacterItem;
         private Button buttonDeleteCharacter;
         private Button buttonAddCharacter;
     }
