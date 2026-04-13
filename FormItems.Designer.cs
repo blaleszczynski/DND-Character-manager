@@ -43,6 +43,8 @@
             errorProviderItems = new ErrorProvider(components);
             buttonSaveChanges = new Button();
             buttonClose = new Button();
+            buttonAddItems = new Button();
+            buttonDeleteItems = new Button();
             ((System.ComponentModel.ISupportInitialize)numericUpDownItemWeight).BeginInit();
             ((System.ComponentModel.ISupportInitialize)dataGridViewItems).BeginInit();
             ((System.ComponentModel.ISupportInitialize)bindingSourceItems).BeginInit();
@@ -52,82 +54,93 @@
             // labelItemsTitle
             // 
             labelItemsTitle.AutoSize = true;
-            labelItemsTitle.Location = new Point(396, 74);
+            labelItemsTitle.Location = new Point(1271, 38);
+            labelItemsTitle.Margin = new Padding(4, 0, 4, 0);
             labelItemsTitle.Name = "labelItemsTitle";
-            labelItemsTitle.Size = new Size(36, 15);
+            labelItemsTitle.Size = new Size(56, 25);
             labelItemsTitle.TabIndex = 0;
             labelItemsTitle.Text = "Items";
             // 
             // labelItemName
             // 
             labelItemName.AutoSize = true;
-            labelItemName.Location = new Point(809, 218);
+            labelItemName.Location = new Point(95, 321);
+            labelItemName.Margin = new Padding(4, 0, 4, 0);
             labelItemName.Name = "labelItemName";
-            labelItemName.Size = new Size(39, 15);
+            labelItemName.Size = new Size(59, 25);
             labelItemName.TabIndex = 1;
             labelItemName.Text = "Name";
             // 
             // labelItemType
             // 
             labelItemType.AutoSize = true;
-            labelItemType.Location = new Point(809, 264);
+            labelItemType.Location = new Point(266, 321);
+            labelItemType.Margin = new Padding(4, 0, 4, 0);
             labelItemType.Name = "labelItemType";
-            labelItemType.Size = new Size(32, 15);
+            labelItemType.Size = new Size(49, 25);
             labelItemType.TabIndex = 2;
             labelItemType.Text = "Type";
             // 
             // labelItemDescription
             // 
             labelItemDescription.AutoSize = true;
-            labelItemDescription.Location = new Point(809, 319);
+            labelItemDescription.Location = new Point(95, 418);
+            labelItemDescription.Margin = new Padding(4, 0, 4, 0);
             labelItemDescription.Name = "labelItemDescription";
-            labelItemDescription.Size = new Size(67, 15);
+            labelItemDescription.Size = new Size(102, 25);
             labelItemDescription.TabIndex = 3;
             labelItemDescription.Text = "Description";
             // 
             // labelItemWeight
             // 
             labelItemWeight.AutoSize = true;
-            labelItemWeight.Location = new Point(809, 380);
+            labelItemWeight.Location = new Point(429, 321);
+            labelItemWeight.Margin = new Padding(4, 0, 4, 0);
             labelItemWeight.Name = "labelItemWeight";
-            labelItemWeight.Size = new Size(45, 15);
+            labelItemWeight.Size = new Size(68, 25);
             labelItemWeight.TabIndex = 4;
             labelItemWeight.Text = "Weight";
             // 
             // textBoxItemName
             // 
-            textBoxItemName.Location = new Point(809, 238);
+            textBoxItemName.Location = new Point(95, 363);
+            textBoxItemName.Margin = new Padding(4, 5, 4, 5);
             textBoxItemName.Name = "textBoxItemName";
-            textBoxItemName.Size = new Size(100, 23);
+            textBoxItemName.Size = new Size(141, 31);
             textBoxItemName.TabIndex = 5;
             // 
             // textBoxItemType
             // 
-            textBoxItemType.Location = new Point(809, 293);
+            textBoxItemType.Location = new Point(266, 363);
+            textBoxItemType.Margin = new Padding(4, 5, 4, 5);
             textBoxItemType.Name = "textBoxItemType";
-            textBoxItemType.Size = new Size(100, 23);
+            textBoxItemType.Size = new Size(141, 31);
             textBoxItemType.TabIndex = 6;
             // 
             // textBoxItemDescription
             // 
-            textBoxItemDescription.Location = new Point(809, 337);
+            textBoxItemDescription.Location = new Point(95, 461);
+            textBoxItemDescription.Margin = new Padding(4, 5, 4, 5);
             textBoxItemDescription.Name = "textBoxItemDescription";
-            textBoxItemDescription.Size = new Size(100, 23);
+            textBoxItemDescription.Size = new Size(141, 31);
             textBoxItemDescription.TabIndex = 7;
             // 
             // numericUpDownItemWeight
             // 
-            numericUpDownItemWeight.Location = new Point(809, 398);
+            numericUpDownItemWeight.Location = new Point(429, 363);
+            numericUpDownItemWeight.Margin = new Padding(4, 5, 4, 5);
             numericUpDownItemWeight.Name = "numericUpDownItemWeight";
-            numericUpDownItemWeight.Size = new Size(120, 23);
+            numericUpDownItemWeight.Size = new Size(171, 31);
             numericUpDownItemWeight.TabIndex = 8;
             // 
             // dataGridViewItems
             // 
             dataGridViewItems.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewItems.Location = new Point(90, 148);
+            dataGridViewItems.Location = new Point(74, 66);
+            dataGridViewItems.Margin = new Padding(4, 5, 4, 5);
             dataGridViewItems.Name = "dataGridViewItems";
-            dataGridViewItems.Size = new Size(240, 150);
+            dataGridViewItems.RowHeadersWidth = 62;
+            dataGridViewItems.Size = new Size(639, 250);
             dataGridViewItems.TabIndex = 9;
             // 
             // errorProviderItems
@@ -136,9 +149,10 @@
             // 
             // buttonSaveChanges
             // 
-            buttonSaveChanges.Location = new Point(347, 425);
+            buttonSaveChanges.Location = new Point(83, 546);
+            buttonSaveChanges.Margin = new Padding(4, 5, 4, 5);
             buttonSaveChanges.Name = "buttonSaveChanges";
-            buttonSaveChanges.Size = new Size(107, 23);
+            buttonSaveChanges.Size = new Size(153, 38);
             buttonSaveChanges.TabIndex = 10;
             buttonSaveChanges.Text = "Save changes";
             buttonSaveChanges.UseVisualStyleBackColor = true;
@@ -146,18 +160,42 @@
             // 
             // buttonClose
             // 
-            buttonClose.Location = new Point(508, 425);
+            buttonClose.Location = new Point(256, 546);
+            buttonClose.Margin = new Padding(4, 5, 4, 5);
             buttonClose.Name = "buttonClose";
-            buttonClose.Size = new Size(75, 23);
+            buttonClose.Size = new Size(107, 38);
             buttonClose.TabIndex = 11;
             buttonClose.Text = "Close";
             buttonClose.UseVisualStyleBackColor = true;
+            buttonClose.Click += buttonClose_Click_1;
+            // 
+            // buttonAddItems
+            // 
+            buttonAddItems.Location = new Point(83, 604);
+            buttonAddItems.Name = "buttonAddItems";
+            buttonAddItems.Size = new Size(153, 40);
+            buttonAddItems.TabIndex = 12;
+            buttonAddItems.Text = "Add";
+            buttonAddItems.UseVisualStyleBackColor = true;
+            buttonAddItems.Click += buttonAddItems_Click;
+            // 
+            // buttonDeleteItems
+            // 
+            buttonDeleteItems.Location = new Point(256, 607);
+            buttonDeleteItems.Name = "buttonDeleteItems";
+            buttonDeleteItems.Size = new Size(107, 37);
+            buttonDeleteItems.TabIndex = 13;
+            buttonDeleteItems.Text = "Delete";
+            buttonDeleteItems.UseVisualStyleBackColor = true;
+            buttonDeleteItems.Click += buttonDeleteItems_Click;
             // 
             // FormItems
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1125, 670);
+            ClientSize = new Size(1607, 1050);
+            Controls.Add(buttonDeleteItems);
+            Controls.Add(buttonAddItems);
             Controls.Add(buttonClose);
             Controls.Add(buttonSaveChanges);
             Controls.Add(dataGridViewItems);
@@ -170,8 +208,11 @@
             Controls.Add(labelItemType);
             Controls.Add(labelItemName);
             Controls.Add(labelItemsTitle);
+            Margin = new Padding(4, 5, 4, 5);
             Name = "FormItems";
             Text = "FormItems";
+            FormClosing += FormItems_FormClosing_1;
+            Load += FormItems_Load_1;
             ((System.ComponentModel.ISupportInitialize)numericUpDownItemWeight).EndInit();
             ((System.ComponentModel.ISupportInitialize)dataGridViewItems).EndInit();
             ((System.ComponentModel.ISupportInitialize)bindingSourceItems).EndInit();
@@ -196,5 +237,7 @@
         private ErrorProvider errorProviderItems;
         private Button buttonClose;
         private Button buttonSaveChanges;
+        private Button buttonDeleteItems;
+        private Button buttonAddItems;
     }
 }
