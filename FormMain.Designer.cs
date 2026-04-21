@@ -89,6 +89,7 @@
             buttonExit.TabIndex = 6;
             buttonExit.Text = "Exit";
             buttonExit.UseVisualStyleBackColor = true;
+            buttonExit.Click += buttonExit_Click;
             // 
             // buttonItems
             // 
