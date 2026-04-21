@@ -52,7 +52,7 @@
             // labelClassesTitle
             // 
             labelClassesTitle.AutoSize = true;
-            labelClassesTitle.Location = new Point(1251, 60);
+            labelClassesTitle.Location = new Point(1259, 586);
             labelClassesTitle.Margin = new Padding(4, 0, 4, 0);
             labelClassesTitle.Name = "labelClassesTitle";
             labelClassesTitle.Size = new Size(69, 25);
@@ -62,7 +62,7 @@
             // labelClassName
             // 
             labelClassName.AutoSize = true;
-            labelClassName.Location = new Point(578, 30);
+            labelClassName.Location = new Point(131, 289);
             labelClassName.Margin = new Padding(4, 0, 4, 0);
             labelClassName.Name = "labelClassName";
             labelClassName.Size = new Size(59, 25);
@@ -72,7 +72,7 @@
             // label2
             // 
             label2.AutoSize = true;
-            label2.Location = new Point(578, 110);
+            label2.Location = new Point(313, 289);
             label2.Margin = new Padding(4, 0, 4, 0);
             label2.Name = "label2";
             label2.Size = new Size(66, 25);
@@ -82,7 +82,7 @@
             // labelPrimaryAbility
             // 
             labelPrimaryAbility.AutoSize = true;
-            labelPrimaryAbility.Location = new Point(578, 207);
+            labelPrimaryAbility.Location = new Point(548, 289);
             labelPrimaryAbility.Margin = new Padding(4, 0, 4, 0);
             labelPrimaryAbility.Name = "labelPrimaryAbility";
             labelPrimaryAbility.Size = new Size(124, 25);
@@ -91,7 +91,7 @@
             // 
             // textBoxClassName
             // 
-            textBoxClassName.Location = new Point(578, 60);
+            textBoxClassName.Location = new Point(131, 331);
             textBoxClassName.Margin = new Padding(4, 5, 4, 5);
             textBoxClassName.Name = "textBoxClassName";
             textBoxClassName.Size = new Size(141, 31);
@@ -99,7 +99,7 @@
             // 
             // numericUpDownHitDie
             // 
-            numericUpDownHitDie.Location = new Point(580, 140);
+            numericUpDownHitDie.Location = new Point(313, 331);
             numericUpDownHitDie.Margin = new Padding(4, 5, 4, 5);
             numericUpDownHitDie.Name = "numericUpDownHitDie";
             numericUpDownHitDie.Size = new Size(171, 31);
@@ -108,7 +108,7 @@
             // comboBoxPrimaryAbility
             // 
             comboBoxPrimaryAbility.FormattingEnabled = true;
-            comboBoxPrimaryAbility.Location = new Point(580, 237);
+            comboBoxPrimaryAbility.Location = new Point(548, 331);
             comboBoxPrimaryAbility.Margin = new Padding(4, 5, 4, 5);
             comboBoxPrimaryAbility.Name = "comboBoxPrimaryAbility";
             comboBoxPrimaryAbility.Size = new Size(171, 33);
@@ -116,54 +116,59 @@
             // 
             // dataGridViewClasses
             // 
+            dataGridViewClasses.BackgroundColor = SystemColors.Control;
             dataGridViewClasses.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewClasses.Location = new Point(112, 43);
+            dataGridViewClasses.Location = new Point(76, 14);
             dataGridViewClasses.Margin = new Padding(4, 5, 4, 5);
             dataGridViewClasses.Name = "dataGridViewClasses";
             dataGridViewClasses.RowHeadersWidth = 62;
-            dataGridViewClasses.Size = new Size(343, 250);
+            dataGridViewClasses.Size = new Size(712, 250);
             dataGridViewClasses.TabIndex = 7;
             // 
             // buttonSaveChanges
             // 
-            buttonSaveChanges.Location = new Point(530, 352);
+            buttonSaveChanges.BackColor = Color.FromArgb(255, 192, 128);
+            buttonSaveChanges.Location = new Point(246, 446);
             buttonSaveChanges.Margin = new Padding(4, 5, 4, 5);
             buttonSaveChanges.Name = "buttonSaveChanges";
             buttonSaveChanges.Size = new Size(107, 38);
             buttonSaveChanges.TabIndex = 8;
             buttonSaveChanges.Text = "Save changes";
-            buttonSaveChanges.UseVisualStyleBackColor = true;
+            buttonSaveChanges.UseVisualStyleBackColor = false;
             buttonSaveChanges.Click += buttonSaveChanges_Click;
             // 
             // buttonClose
             // 
-            buttonClose.Location = new Point(656, 352);
+            buttonClose.BackColor = Color.FromArgb(255, 128, 128);
+            buttonClose.Location = new Point(391, 446);
             buttonClose.Margin = new Padding(4, 5, 4, 5);
             buttonClose.Name = "buttonClose";
             buttonClose.Size = new Size(107, 38);
             buttonClose.TabIndex = 9;
             buttonClose.Text = "Close";
-            buttonClose.UseVisualStyleBackColor = true;
+            buttonClose.UseVisualStyleBackColor = false;
             buttonClose.Click += buttonClose_Click;
             // 
             // buttonAddClass
             // 
-            buttonAddClass.Location = new Point(530, 412);
+            buttonAddClass.BackColor = Color.FromArgb(255, 192, 255);
+            buttonAddClass.Location = new Point(246, 501);
             buttonAddClass.Name = "buttonAddClass";
             buttonAddClass.Size = new Size(107, 34);
             buttonAddClass.TabIndex = 10;
             buttonAddClass.Text = "Add";
-            buttonAddClass.UseVisualStyleBackColor = true;
+            buttonAddClass.UseVisualStyleBackColor = false;
             buttonAddClass.Click += buttonAddClass_Click;
             // 
             // buttonDeleteClass
             // 
-            buttonDeleteClass.Location = new Point(656, 412);
+            buttonDeleteClass.BackColor = Color.Red;
+            buttonDeleteClass.Location = new Point(391, 501);
             buttonDeleteClass.Name = "buttonDeleteClass";
             buttonDeleteClass.Size = new Size(107, 34);
             buttonDeleteClass.TabIndex = 11;
             buttonDeleteClass.Text = "Delete";
-            buttonDeleteClass.UseVisualStyleBackColor = true;
+            buttonDeleteClass.UseVisualStyleBackColor = false;
             buttonDeleteClass.Click += buttonDeleteClass_Click;
             // 
             // errorProviderClasses
@@ -174,6 +179,7 @@
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
+            BackColor = SystemColors.ButtonFace;
             ClientSize = new Size(1464, 1003);
             Controls.Add(buttonDeleteClass);
             Controls.Add(buttonAddClass);

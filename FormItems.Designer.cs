@@ -54,17 +54,18 @@
             // labelItemsTitle
             // 
             labelItemsTitle.AutoSize = true;
-            labelItemsTitle.Location = new Point(1271, 38);
+            labelItemsTitle.Font = new Font("Segoe UI", 20F);
+            labelItemsTitle.Location = new Point(594, 9);
             labelItemsTitle.Margin = new Padding(4, 0, 4, 0);
             labelItemsTitle.Name = "labelItemsTitle";
-            labelItemsTitle.Size = new Size(56, 25);
+            labelItemsTitle.Size = new Size(120, 54);
             labelItemsTitle.TabIndex = 0;
             labelItemsTitle.Text = "Items";
             // 
             // labelItemName
             // 
             labelItemName.AutoSize = true;
-            labelItemName.Location = new Point(95, 321);
+            labelItemName.Location = new Point(96, 341);
             labelItemName.Margin = new Padding(4, 0, 4, 0);
             labelItemName.Name = "labelItemName";
             labelItemName.Size = new Size(59, 25);
@@ -74,7 +75,7 @@
             // labelItemType
             // 
             labelItemType.AutoSize = true;
-            labelItemType.Location = new Point(266, 321);
+            labelItemType.Location = new Point(267, 341);
             labelItemType.Margin = new Padding(4, 0, 4, 0);
             labelItemType.Name = "labelItemType";
             labelItemType.Size = new Size(49, 25);
@@ -84,7 +85,7 @@
             // labelItemDescription
             // 
             labelItemDescription.AutoSize = true;
-            labelItemDescription.Location = new Point(95, 418);
+            labelItemDescription.Location = new Point(96, 438);
             labelItemDescription.Margin = new Padding(4, 0, 4, 0);
             labelItemDescription.Name = "labelItemDescription";
             labelItemDescription.Size = new Size(102, 25);
@@ -94,7 +95,7 @@
             // labelItemWeight
             // 
             labelItemWeight.AutoSize = true;
-            labelItemWeight.Location = new Point(429, 321);
+            labelItemWeight.Location = new Point(430, 341);
             labelItemWeight.Margin = new Padding(4, 0, 4, 0);
             labelItemWeight.Name = "labelItemWeight";
             labelItemWeight.Size = new Size(68, 25);
@@ -103,7 +104,7 @@
             // 
             // textBoxItemName
             // 
-            textBoxItemName.Location = new Point(95, 363);
+            textBoxItemName.Location = new Point(96, 383);
             textBoxItemName.Margin = new Padding(4, 5, 4, 5);
             textBoxItemName.Name = "textBoxItemName";
             textBoxItemName.Size = new Size(141, 31);
@@ -111,7 +112,7 @@
             // 
             // textBoxItemType
             // 
-            textBoxItemType.Location = new Point(266, 363);
+            textBoxItemType.Location = new Point(267, 383);
             textBoxItemType.Margin = new Padding(4, 5, 4, 5);
             textBoxItemType.Name = "textBoxItemType";
             textBoxItemType.Size = new Size(141, 31);
@@ -119,15 +120,16 @@
             // 
             // textBoxItemDescription
             // 
-            textBoxItemDescription.Location = new Point(95, 461);
+            textBoxItemDescription.Location = new Point(95, 469);
             textBoxItemDescription.Margin = new Padding(4, 5, 4, 5);
+            textBoxItemDescription.Multiline = true;
             textBoxItemDescription.Name = "textBoxItemDescription";
-            textBoxItemDescription.Size = new Size(141, 31);
+            textBoxItemDescription.Size = new Size(505, 134);
             textBoxItemDescription.TabIndex = 7;
             // 
             // numericUpDownItemWeight
             // 
-            numericUpDownItemWeight.Location = new Point(429, 363);
+            numericUpDownItemWeight.Location = new Point(430, 383);
             numericUpDownItemWeight.Margin = new Padding(4, 5, 4, 5);
             numericUpDownItemWeight.Name = "numericUpDownItemWeight";
             numericUpDownItemWeight.Size = new Size(171, 31);
@@ -135,8 +137,9 @@
             // 
             // dataGridViewItems
             // 
+            dataGridViewItems.BackgroundColor = SystemColors.ButtonFace;
             dataGridViewItems.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewItems.Location = new Point(74, 66);
+            dataGridViewItems.Location = new Point(75, 86);
             dataGridViewItems.Margin = new Padding(4, 5, 4, 5);
             dataGridViewItems.Name = "dataGridViewItems";
             dataGridViewItems.RowHeadersWidth = 62;
@@ -149,44 +152,48 @@
             // 
             // buttonSaveChanges
             // 
-            buttonSaveChanges.Location = new Point(83, 546);
+            buttonSaveChanges.BackColor = Color.FromArgb(255, 192, 128);
+            buttonSaveChanges.Location = new Point(89, 649);
             buttonSaveChanges.Margin = new Padding(4, 5, 4, 5);
             buttonSaveChanges.Name = "buttonSaveChanges";
             buttonSaveChanges.Size = new Size(153, 38);
             buttonSaveChanges.TabIndex = 10;
             buttonSaveChanges.Text = "Save changes";
-            buttonSaveChanges.UseVisualStyleBackColor = true;
+            buttonSaveChanges.UseVisualStyleBackColor = false;
             buttonSaveChanges.Click += buttonSaveChanges_Click;
             // 
             // buttonClose
             // 
-            buttonClose.Location = new Point(256, 546);
+            buttonClose.BackColor = Color.FromArgb(255, 128, 128);
+            buttonClose.Location = new Point(267, 649);
             buttonClose.Margin = new Padding(4, 5, 4, 5);
             buttonClose.Name = "buttonClose";
             buttonClose.Size = new Size(107, 38);
             buttonClose.TabIndex = 11;
             buttonClose.Text = "Close";
-            buttonClose.UseVisualStyleBackColor = true;
+            buttonClose.UseVisualStyleBackColor = false;
             buttonClose.Click += buttonClose_Click_1;
             // 
             // buttonAddItems
             // 
-            buttonAddItems.Location = new Point(83, 604);
+            buttonAddItems.BackColor = Color.FromArgb(255, 192, 255);
+            buttonAddItems.Location = new Point(89, 695);
             buttonAddItems.Name = "buttonAddItems";
             buttonAddItems.Size = new Size(153, 40);
             buttonAddItems.TabIndex = 12;
             buttonAddItems.Text = "Add";
-            buttonAddItems.UseVisualStyleBackColor = true;
+            buttonAddItems.UseVisualStyleBackColor = false;
             buttonAddItems.Click += buttonAddItems_Click;
             // 
             // buttonDeleteItems
             // 
-            buttonDeleteItems.Location = new Point(256, 607);
+            buttonDeleteItems.BackColor = Color.Red;
+            buttonDeleteItems.Location = new Point(267, 698);
             buttonDeleteItems.Name = "buttonDeleteItems";
             buttonDeleteItems.Size = new Size(107, 37);
             buttonDeleteItems.TabIndex = 13;
             buttonDeleteItems.Text = "Delete";
-            buttonDeleteItems.UseVisualStyleBackColor = true;
+            buttonDeleteItems.UseVisualStyleBackColor = false;
             buttonDeleteItems.Click += buttonDeleteItems_Click;
             // 
             // FormItems

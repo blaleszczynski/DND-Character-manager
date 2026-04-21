@@ -27,7 +27,7 @@ namespace DND_Character_manager
         private DataTable classesTable;
         private DataTable itemsTable;
 
-        private DataView characterItemsView; 
+        private DataView characterItemsView;
 
         public FormCharacters()
         {
@@ -526,6 +526,11 @@ namespace DND_Character_manager
         private void buttonClose_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void textBoxCharacterName_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

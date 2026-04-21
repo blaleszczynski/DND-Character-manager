@@ -39,9 +39,14 @@
             // 
             // buttonCharacters
             // 
-            buttonCharacters.Location = new Point(523, 187);
+            buttonCharacters.FlatAppearance.BorderSize = 0;
+            buttonCharacters.FlatAppearance.MouseOverBackColor = Color.FromArgb(255, 192, 255);
+            buttonCharacters.FlatStyle = FlatStyle.Flat;
+            buttonCharacters.Font = new Font("Segoe UI", 12F);
+            buttonCharacters.Location = new Point(747, 312);
+            buttonCharacters.Margin = new Padding(4, 5, 4, 5);
             buttonCharacters.Name = "buttonCharacters";
-            buttonCharacters.Size = new Size(130, 23);
+            buttonCharacters.Size = new Size(186, 38);
             buttonCharacters.TabIndex = 0;
             buttonCharacters.Text = "Open Characters";
             buttonCharacters.UseVisualStyleBackColor = true;
@@ -50,35 +55,51 @@
             // labelTitle
             // 
             labelTitle.AutoSize = true;
-            labelTitle.Location = new Point(596, 41);
+            labelTitle.FlatStyle = FlatStyle.System;
+            labelTitle.Font = new Font("Segoe UI", 20F);
+            labelTitle.Location = new Point(622, 127);
+            labelTitle.Margin = new Padding(4, 0, 4, 0);
             labelTitle.Name = "labelTitle";
-            labelTitle.Size = new Size(134, 15);
+            labelTitle.Size = new Size(451, 54);
             labelTitle.TabIndex = 1;
             labelTitle.Text = "DnD Character Manager";
             // 
             // labelSubtitle
             // 
             labelSubtitle.AutoSize = true;
-            labelSubtitle.Location = new Point(523, 562);
+            labelSubtitle.FlatStyle = FlatStyle.System;
+            labelSubtitle.Font = new Font("Segoe UI", 12F);
+            labelSubtitle.Location = new Point(478, 65);
+            labelSubtitle.Margin = new Padding(4, 0, 4, 0);
             labelSubtitle.Name = "labelSubtitle";
-            labelSubtitle.Size = new Size(358, 15);
+            labelSubtitle.Size = new Size(725, 32);
             labelSubtitle.TabIndex = 5;
             labelSubtitle.Text = "Aplikacja do zarządzania danymi postaci w Dungeons and Dragons";
             // 
             // buttonExit
             // 
-            buttonExit.Location = new Point(523, 329);
+            buttonExit.FlatAppearance.BorderSize = 0;
+            buttonExit.FlatAppearance.MouseOverBackColor = Color.FromArgb(255, 192, 255);
+            buttonExit.FlatStyle = FlatStyle.Flat;
+            buttonExit.Font = new Font("Segoe UI", 12F);
+            buttonExit.Location = new Point(747, 548);
+            buttonExit.Margin = new Padding(4, 5, 4, 5);
             buttonExit.Name = "buttonExit";
-            buttonExit.Size = new Size(130, 23);
+            buttonExit.Size = new Size(186, 38);
             buttonExit.TabIndex = 6;
             buttonExit.Text = "Exit";
             buttonExit.UseVisualStyleBackColor = true;
             // 
             // buttonItems
             // 
-            buttonItems.Location = new Point(523, 274);
+            buttonItems.FlatAppearance.BorderSize = 0;
+            buttonItems.FlatAppearance.MouseOverBackColor = Color.FromArgb(255, 192, 255);
+            buttonItems.FlatStyle = FlatStyle.Flat;
+            buttonItems.Font = new Font("Segoe UI", 12F);
+            buttonItems.Location = new Point(747, 457);
+            buttonItems.Margin = new Padding(4, 5, 4, 5);
             buttonItems.Name = "buttonItems";
-            buttonItems.Size = new Size(130, 23);
+            buttonItems.Size = new Size(186, 38);
             buttonItems.TabIndex = 7;
             buttonItems.Text = "Open Items";
             buttonItems.UseVisualStyleBackColor = true;
@@ -86,9 +107,14 @@
             // 
             // buttonClasses
             // 
-            buttonClasses.Location = new Point(523, 245);
+            buttonClasses.FlatAppearance.BorderSize = 0;
+            buttonClasses.FlatAppearance.MouseOverBackColor = Color.FromArgb(255, 192, 255);
+            buttonClasses.FlatStyle = FlatStyle.Flat;
+            buttonClasses.Font = new Font("Segoe UI", 12F);
+            buttonClasses.Location = new Point(747, 408);
+            buttonClasses.Margin = new Padding(4, 5, 4, 5);
             buttonClasses.Name = "buttonClasses";
-            buttonClasses.Size = new Size(130, 23);
+            buttonClasses.Size = new Size(186, 38);
             buttonClasses.TabIndex = 8;
             buttonClasses.Text = "Open Classes";
             buttonClasses.UseVisualStyleBackColor = true;
@@ -96,9 +122,14 @@
             // 
             // buttonRaces
             // 
-            buttonRaces.Location = new Point(523, 216);
+            buttonRaces.FlatAppearance.BorderSize = 0;
+            buttonRaces.FlatAppearance.MouseOverBackColor = Color.FromArgb(255, 192, 255);
+            buttonRaces.FlatStyle = FlatStyle.Flat;
+            buttonRaces.Font = new Font("Segoe UI", 12F);
+            buttonRaces.Location = new Point(747, 360);
+            buttonRaces.Margin = new Padding(4, 5, 4, 5);
             buttonRaces.Name = "buttonRaces";
-            buttonRaces.Size = new Size(130, 23);
+            buttonRaces.Size = new Size(186, 38);
             buttonRaces.TabIndex = 9;
             buttonRaces.Text = "Open Races";
             buttonRaces.UseVisualStyleBackColor = true;
@@ -106,9 +137,10 @@
             // 
             // FormMain
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1544, 713);
+            BackColor = SystemColors.ControlLightLight;
+            ClientSize = new Size(1924, 1050);
             Controls.Add(buttonRaces);
             Controls.Add(buttonClasses);
             Controls.Add(buttonItems);
@@ -116,6 +148,7 @@
             Controls.Add(labelSubtitle);
             Controls.Add(labelTitle);
             Controls.Add(buttonCharacters);
+            Margin = new Padding(4, 5, 4, 5);
             Name = "FormMain";
             Text = "Form1";
             ResumeLayout(false);

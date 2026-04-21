@@ -53,10 +53,13 @@
             // 
             // dataGridViewRaces
             // 
+            dataGridViewRaces.BackgroundColor = SystemColors.ButtonFace;
             dataGridViewRaces.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewRaces.Location = new Point(139, 176);
+            dataGridViewRaces.Location = new Point(81, 68);
+            dataGridViewRaces.Margin = new Padding(4, 5, 4, 5);
             dataGridViewRaces.Name = "dataGridViewRaces";
-            dataGridViewRaces.Size = new Size(336, 234);
+            dataGridViewRaces.RowHeadersWidth = 62;
+            dataGridViewRaces.Size = new Size(1198, 280);
             dataGridViewRaces.TabIndex = 0;
             // 
             // errorProviderRaces
@@ -66,122 +69,140 @@
             // labelRacesTitle
             // 
             labelRacesTitle.AutoSize = true;
-            labelRacesTitle.Location = new Point(519, 44);
+            labelRacesTitle.Font = new Font("Segoe UI", 20F);
+            labelRacesTitle.Location = new Point(601, 9);
+            labelRacesTitle.Margin = new Padding(4, 0, 4, 0);
             labelRacesTitle.Name = "labelRacesTitle";
-            labelRacesTitle.Size = new Size(37, 15);
+            labelRacesTitle.Size = new Size(123, 54);
             labelRacesTitle.TabIndex = 1;
             labelRacesTitle.Text = "Races";
             // 
             // labelAbilityBonusDescription
             // 
             labelAbilityBonusDescription.AutoSize = true;
-            labelAbilityBonusDescription.Location = new Point(856, 411);
+            labelAbilityBonusDescription.Location = new Point(1104, 359);
+            labelAbilityBonusDescription.Margin = new Padding(4, 0, 4, 0);
             labelAbilityBonusDescription.Name = "labelAbilityBonusDescription";
-            labelAbilityBonusDescription.Size = new Size(41, 15);
+            labelAbilityBonusDescription.Size = new Size(62, 25);
             labelAbilityBonusDescription.TabIndex = 2;
             labelAbilityBonusDescription.Text = "Ability";
             // 
             // labelRaceSize
             // 
             labelRaceSize.AutoSize = true;
-            labelRaceSize.Location = new Point(856, 357);
+            labelRaceSize.Location = new Point(754, 369);
+            labelRaceSize.Margin = new Padding(4, 0, 4, 0);
             labelRaceSize.Name = "labelRaceSize";
-            labelRaceSize.Size = new Size(27, 15);
+            labelRaceSize.Size = new Size(43, 25);
             labelRaceSize.TabIndex = 3;
             labelRaceSize.Text = "Size";
             // 
             // labelRaceSpeed
             // 
             labelRaceSpeed.AutoSize = true;
-            labelRaceSpeed.Location = new Point(856, 311);
+            labelRaceSpeed.Location = new Point(390, 370);
+            labelRaceSpeed.Margin = new Padding(4, 0, 4, 0);
             labelRaceSpeed.Name = "labelRaceSpeed";
-            labelRaceSpeed.Size = new Size(39, 15);
+            labelRaceSpeed.Size = new Size(62, 25);
             labelRaceSpeed.TabIndex = 4;
             labelRaceSpeed.Text = "Speed";
             // 
             // labelRaceName
             // 
             labelRaceName.AutoSize = true;
-            labelRaceName.Location = new Point(854, 267);
+            labelRaceName.Location = new Point(105, 373);
+            labelRaceName.Margin = new Padding(4, 0, 4, 0);
             labelRaceName.Name = "labelRaceName";
-            labelRaceName.Size = new Size(39, 15);
+            labelRaceName.Size = new Size(59, 25);
             labelRaceName.TabIndex = 5;
             labelRaceName.Text = "Name";
             // 
             // textBoxRaceName
             // 
-            textBoxRaceName.Location = new Point(854, 285);
+            textBoxRaceName.Location = new Point(105, 403);
+            textBoxRaceName.Margin = new Padding(4, 5, 4, 5);
             textBoxRaceName.Name = "textBoxRaceName";
-            textBoxRaceName.Size = new Size(100, 23);
+            textBoxRaceName.Size = new Size(141, 31);
             textBoxRaceName.TabIndex = 7;
             // 
             // numericUpDownRaceSpeed
             // 
-            numericUpDownRaceSpeed.Location = new Point(854, 331);
+            numericUpDownRaceSpeed.Location = new Point(387, 404);
+            numericUpDownRaceSpeed.Margin = new Padding(4, 5, 4, 5);
             numericUpDownRaceSpeed.Name = "numericUpDownRaceSpeed";
-            numericUpDownRaceSpeed.Size = new Size(120, 23);
+            numericUpDownRaceSpeed.Size = new Size(171, 31);
             numericUpDownRaceSpeed.TabIndex = 9;
             // 
             // comboBoxRaceSize
             // 
             comboBoxRaceSize.FormattingEnabled = true;
-            comboBoxRaceSize.Location = new Point(853, 375);
+            comboBoxRaceSize.Location = new Point(750, 399);
+            comboBoxRaceSize.Margin = new Padding(4, 5, 4, 5);
             comboBoxRaceSize.Name = "comboBoxRaceSize";
-            comboBoxRaceSize.Size = new Size(121, 23);
+            comboBoxRaceSize.Size = new Size(171, 33);
             comboBoxRaceSize.TabIndex = 10;
             // 
             // buttonSaveChanges
             // 
-            buttonSaveChanges.Location = new Point(481, 436);
+            buttonSaveChanges.BackColor = Color.FromArgb(255, 192, 128);
+            buttonSaveChanges.Location = new Point(105, 495);
+            buttonSaveChanges.Margin = new Padding(4, 5, 4, 5);
             buttonSaveChanges.Name = "buttonSaveChanges";
-            buttonSaveChanges.Size = new Size(164, 23);
+            buttonSaveChanges.Size = new Size(147, 38);
             buttonSaveChanges.TabIndex = 13;
             buttonSaveChanges.Text = "Save changes";
-            buttonSaveChanges.UseVisualStyleBackColor = true;
+            buttonSaveChanges.UseVisualStyleBackColor = false;
             buttonSaveChanges.Click += buttonSaveChanges_Click;
             // 
             // buttonClose
             // 
-            buttonClose.Location = new Point(680, 436);
+            buttonClose.BackColor = Color.FromArgb(255, 128, 128);
+            buttonClose.Location = new Point(299, 495);
+            buttonClose.Margin = new Padding(4, 5, 4, 5);
             buttonClose.Name = "buttonClose";
-            buttonClose.Size = new Size(75, 23);
+            buttonClose.Size = new Size(125, 38);
             buttonClose.TabIndex = 14;
             buttonClose.Text = "Close";
-            buttonClose.UseVisualStyleBackColor = true;
+            buttonClose.UseVisualStyleBackColor = false;
             buttonClose.Click += buttonClose_Click;
             // 
             // textBoxAbilityBonusDescription
             // 
-            textBoxAbilityBonusDescription.Location = new Point(853, 436);
+            textBoxAbilityBonusDescription.Location = new Point(1100, 401);
+            textBoxAbilityBonusDescription.Margin = new Padding(4, 5, 4, 5);
             textBoxAbilityBonusDescription.Name = "textBoxAbilityBonusDescription";
-            textBoxAbilityBonusDescription.Size = new Size(100, 23);
+            textBoxAbilityBonusDescription.Size = new Size(141, 31);
             textBoxAbilityBonusDescription.TabIndex = 15;
             // 
             // buttonAddRace
             // 
-            buttonAddRace.Location = new Point(534, 526);
+            buttonAddRace.BackColor = Color.FromArgb(255, 192, 255);
+            buttonAddRace.Location = new Point(105, 560);
+            buttonAddRace.Margin = new Padding(4, 5, 4, 5);
             buttonAddRace.Name = "buttonAddRace";
-            buttonAddRace.Size = new Size(75, 23);
+            buttonAddRace.Size = new Size(147, 38);
             buttonAddRace.TabIndex = 16;
             buttonAddRace.Text = "Add Race";
-            buttonAddRace.UseVisualStyleBackColor = true;
+            buttonAddRace.UseVisualStyleBackColor = false;
             buttonAddRace.Click += buttonAddRace_Click;
             // 
             // buttonDeleteRace
             // 
-            buttonDeleteRace.Location = new Point(656, 526);
+            buttonDeleteRace.BackColor = Color.Red;
+            buttonDeleteRace.Location = new Point(299, 560);
+            buttonDeleteRace.Margin = new Padding(4, 5, 4, 5);
             buttonDeleteRace.Name = "buttonDeleteRace";
-            buttonDeleteRace.Size = new Size(83, 23);
+            buttonDeleteRace.Size = new Size(125, 38);
             buttonDeleteRace.TabIndex = 17;
             buttonDeleteRace.Text = "Delete race";
-            buttonDeleteRace.UseVisualStyleBackColor = true;
+            buttonDeleteRace.UseVisualStyleBackColor = false;
             buttonDeleteRace.Click += buttonDeleteRace_Click;
             // 
             // FormRaces
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1401, 706);
+            ClientSize = new Size(1924, 1050);
             Controls.Add(buttonDeleteRace);
             Controls.Add(buttonAddRace);
             Controls.Add(textBoxAbilityBonusDescription);
@@ -196,6 +217,7 @@
             Controls.Add(labelAbilityBonusDescription);
             Controls.Add(labelRacesTitle);
             Controls.Add(dataGridViewRaces);
+            Margin = new Padding(4, 5, 4, 5);
             Name = "FormRaces";
             Text = "FormRaces";
             FormClosing += FormRaces_FormClosing;
